@@ -7,6 +7,8 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		04C137FD1B4D0171007AD7B8 /* FlipPresentAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C137FC1B4D0171007AD7B8 /* FlipPresentAnimationController.swift */; };
+		04C137FF1B4D04AD007AD7B8 /* FlipDismissAnimationController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 04C137FE1B4D04AD007AD7B8 /* FlipDismissAnimationController.swift */; };
 		18F4A6551F6355560076435C /* Launch Screen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 18F4A6541F6355560076435C /* Launch Screen.storyboard */; };
 		18F4A6591F635A6D0076435C /* StoryboardSupport.swift in Sources */ = {isa = PBXBuildFile; fileRef = 18F4A6581F635A6D0076435C /* StoryboardSupport.swift */; };
 		BB3B33A81B40386700B5C810 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B33A71B40386700B5C810 /* AppDelegate.swift */; };
@@ -18,10 +20,13 @@
 		BB3B33D41B403BAF00B5C810 /* PetCard.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B33D31B403BAF00B5C810 /* PetCard.swift */; };
 		BB3B33DB1B4056B700B5C810 /* Pets.plist in Resources */ = {isa = PBXBuildFile; fileRef = BB3B33DA1B4056B700B5C810 /* Pets.plist */; };
 		BB3B33DD1B4064E600B5C810 /* PetCardStore.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B33DC1B4064E600B5C810 /* PetCardStore.swift */; };
+		BB3B33E81B40A1A100B5C810 /* SwipeInteractionController.swift in Sources */ = {isa = PBXBuildFile; fileRef = BB3B33E71B40A1A100B5C810 /* SwipeInteractionController.swift */; };
 		BBC248791B4D8EFD00F4C642 /* AnimationHelper.swift in Sources */ = {isa = PBXBuildFile; fileRef = BBC248781B4D8EFD00F4C642 /* AnimationHelper.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
+		04C137FC1B4D0171007AD7B8 /* FlipPresentAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipPresentAnimationController.swift; sourceTree = "<group>"; };
+		04C137FE1B4D04AD007AD7B8 /* FlipDismissAnimationController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = FlipDismissAnimationController.swift; sourceTree = "<group>"; };
 		18F4A6541F6355560076435C /* Launch Screen.storyboard */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; path = "Launch Screen.storyboard"; sourceTree = "<group>"; };
 		18F4A6581F635A6D0076435C /* StoryboardSupport.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = StoryboardSupport.swift; sourceTree = "<group>"; };
 		BB3B33A21B40386700B5C810 /* Guess the Pet.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = "Guess the Pet.app"; sourceTree = BUILT_PRODUCTS_DIR; };
@@ -35,6 +40,7 @@
 		BB3B33D31B403BAF00B5C810 /* PetCard.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetCard.swift; sourceTree = "<group>"; };
 		BB3B33DA1B4056B700B5C810 /* Pets.plist */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text.plist.xml; path = Pets.plist; sourceTree = "<group>"; };
 		BB3B33DC1B4064E600B5C810 /* PetCardStore.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = PetCardStore.swift; sourceTree = "<group>"; };
+		BB3B33E71B40A1A100B5C810 /* SwipeInteractionController.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = SwipeInteractionController.swift; sourceTree = "<group>"; };
 		BBC248781B4D8EFD00F4C642 /* AnimationHelper.swift */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.swift; path = AnimationHelper.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
@@ -140,6 +146,8 @@
 		BB3B33DE1B40654700B5C810 /* Animation controllers */ = {
 			isa = PBXGroup;
 			children = (
+				04C137FC1B4D0171007AD7B8 /* FlipPresentAnimationController.swift */,
+				04C137FE1B4D04AD007AD7B8 /* FlipDismissAnimationController.swift */,
 			);
 			path = "Animation controllers";
 			sourceTree = "<group>";
@@ -147,6 +155,7 @@
 		BB3B33DF1B40654F00B5C810 /* Interaction controllers */ = {
 			isa = PBXGroup;
 			children = (
+				BB3B33E71B40A1A100B5C810 /* SwipeInteractionController.swift */,
 			);
 			path = "Interaction controllers";
 			sourceTree = "<group>";
@@ -225,8 +234,11 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				04C137FF1B4D04AD007AD7B8 /* FlipDismissAnimationController.swift in Sources */,
+				BB3B33E81B40A1A100B5C810 /* SwipeInteractionController.swift in Sources */,
 				BB3B33DD1B4064E600B5C810 /* PetCardStore.swift in Sources */,
 				BB3B33CD1B4038ED00B5C810 /* RevealViewController.swift in Sources */,
+				04C137FD1B4D0171007AD7B8 /* FlipPresentAnimationController.swift in Sources */,
 				BB3B33D41B403BAF00B5C810 /* PetCard.swift in Sources */,
 				BBC248791B4D8EFD00F4C642 /* AnimationHelper.swift in Sources */,
 				BB3B33A81B40386700B5C810 /* AppDelegate.swift in Sources */,

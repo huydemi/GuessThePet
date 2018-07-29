@@ -28,22 +28,49 @@
 
 import UIKit
 
-class RevealViewController: UIViewController {
+class SwipeInteractionController: UIPercentDrivenInteractiveTransition {
   
-  @IBOutlet weak var titleLabel: UILabel!
-  @IBOutlet weak var imageView: UIImageView!
+  var interactionInProgress = false
   
-  var petCard: PetCard?
-  var swipeInteractionController: SwipeInteractionController?
+  private var shouldCompleteTransition = false
+  private weak var viewController: UIViewController!
   
-  override func viewDidLoad() {
-    super.viewDidLoad()
-    titleLabel.text = petCard?.name
-    imageView.image = petCard?.image
-    swipeInteractionController = SwipeInteractionController(viewController: self)
+  init(viewController: UIViewController) {
+    super.init()
+    self.viewController = viewController
+    prepareGestureRecognizer(in: viewController.view)
   }
   
-  @IBAction func dismissPressed(_ sender: UIButton) {
-    dismiss(animated: true, completion: nil)
+  private func prepareGestureRecognizer(in view: UIView) {
+    let gesture = UIScreenEdgePanGestureRecognizer(target: self, action: #selector(handleGesture(_:)))
+    gesture.edges = .left
+    view.addGestureRecognizer(gesture)
+  }
+  
+  @objc func handleGesture(_ gestureRecognizer: UIScreenEdgePanGestureRecognizer) {
+    let translation = gestureRecognizer.translation(in: gestureRecognizer.view!.superview!)
+    var progress = (translation.x / 200)
+    progress = CGFloat(fminf(fmaxf(Float(progress), 0.0), 1.0))
+    
+    switch gestureRecognizer.state {
+    case .began:
+      interactionInProgress = true
+      viewController.dismiss(animated: true, completion: nil)
+    case .changed:
+      shouldCompleteTransition = progress > 0.5
+      update(progress)
+    case .cancelled:
+      interactionInProgress = false
+      cancel()
+    case .ended:
+      interactionInProgress = false
+      if shouldCompleteTransition {
+        finish()
+      } else {
+        cancel()
+      }
+    default:
+      break
+    }
   }
 }
