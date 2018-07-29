@@ -8,6 +8,8 @@ In this tutorial, you’ll add some custom UIViewController transitions to a sma
 
 ![screenshot](https://koenig-media.raywenderlich.com/uploads/2017/11/UIViewControllerTransitions-feature-5.png)
 
+![screenshot](https://koenig-media.raywenderlich.com/uploads/2015/07/parts.001.jpg)
+
 ![screenshot](https://koenig-media.raywenderlich.com/uploads/2015/07/interactive.gif)
 
 ---
